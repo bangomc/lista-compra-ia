@@ -1,0 +1,5 @@
+{
+  "name": "Lista de Compras Compartilhada",
+  "description": "Um aplicativo de lista de compras em tempo real para compartilhar com outras pessoas usando Firebase e Angular. Marque os itens que você já pegou para que todos saibam, evitando compras duplicadas.",
+  "requestFramePermissions": []
+}
