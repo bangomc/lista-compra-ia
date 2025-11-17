@@ -1,7 +1,7 @@
 
 import '@angular/compiler';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideZonelessChangeDetection, importProvidersFrom } from '@angular/core';
+import { provideZonelessChangeDetection } from '@angular/core';
 import { AppComponent } from './src/app.component';
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -12,11 +12,9 @@ import { firebaseConfig } from './src/environments/firebase-config';
 bootstrapApplication(AppComponent, {
   providers: [
     provideZonelessChangeDetection(),
-    importProvidersFrom([
-      provideFirebaseApp(() => initializeApp(firebaseConfig)),
-      provideAuth(() => getAuth()),
-      provideFirestore(() => getFirestore())
-    ]),
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
 }).catch(err => console.error(err));
 
